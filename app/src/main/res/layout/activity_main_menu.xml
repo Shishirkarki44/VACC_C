@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:contextClickable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".MainMenu"
+    tools:layout_editor_absoluteY="81dp">
+
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="141dp"
+        android:layout_height="49dp"
+
+        android:layout_marginTop="536dp"
+        android:foregroundGravity="center"
+        android:onClick="returnTo"
+        android:text="@string/log_out"
+        android:textColor="#F40808"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Title1"
+        android:layout_width="77dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="291dp"
+        android:fontFamily="cursive"
+        android:text="@string/app_name"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/welcomeNote"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/welcomeNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/welcome_to_the_app"
+        app:layout_constraintBottom_toTopOf="@+id/bar"
+        app:layout_constraintEnd_toStartOf="@+id/titleView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Title1"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/titleView"
+        android:layout_width="110dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="34dp"
+        android:contentDescription="@string/nulL"
+        app:layout_constraintBottom_toTopOf="@+id/bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/welcomeNote"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/title" />
+
+    <SurfaceView
+        android:id="@+id/bar"
+        android:layout_width="413dp"
+        android:layout_height="6dp"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/session_user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleView" />
+
+    <TextView
+        android:id="@+id/session_user"
+        android:layout_width="92dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bar" />
+
+    <LinearLayout
+        android:layout_width="413dp"
+        android:layout_height="136dp"
+        android:layout_marginTop="122dp"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="183dp"
+            android:layout_height="113dp"
+            android:layout_margin="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/checkCovid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageView11"
+                    android:layout_centerInParent="false"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="false"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/andika"
+                    android:text="@string/check_for_symptoms"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="133dp"
+                    android:layout_height="83dp"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/nulL"
+                    app:srcCompat="@drawable/symptoms" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="113dp"
+            android:layout_margin="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/myvaccination"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageView12"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/andika"
+                    android:text="@string/my_vaccination"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:layout_width="168dp"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="@string/nulL"
+                    app:srcCompat="@drawable/vaccs" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="413dp"
+        android:layout_height="136dp"
+        android:layout_marginTop="256dp"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="183dp"
+            android:layout_height="113dp"
+            android:layout_margin="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/vaccine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageView13"
+                    android:layout_centerInParent="false"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="false"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/andika"
+                    android:text="@string/vaccine"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="133dp"
+                    android:layout_height="83dp"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/nulL"
+                    app:srcCompat="@drawable/vaccine"
+                    tools:ignore="ImageContrastCheck" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="113dp"
+            android:layout_margin="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/support"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageView14"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/andika"
+                    android:text="@string/get_health_support"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imageView14"
+                    android:layout_width="168dp"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="@string/nulL"
+                    app:srcCompat="@drawable/support" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="413dp"
+        android:layout_height="136dp"
+        android:layout_marginTop="392dp"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="183dp"
+            android:layout_height="113dp"
+            android:layout_margin="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/covidNow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageView16"
+                    android:layout_centerInParent="false"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="false"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/andika"
+                    android:text="@string/covid_now"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imageView16"
+                    android:layout_width="133dp"
+                    android:layout_height="83dp"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/nulL"
+                    app:srcCompat="@drawable/covidnow"
+                    tools:ignore="ImageContrastCheck" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="113dp"
+            android:layout_margin="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/healthTopics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageView17"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/andika"
+                    android:text="@string/health_topics"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imageView17"
+                    android:layout_width="168dp"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="@string/nulL"
+                    app:srcCompat="@drawable/healthinfo" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

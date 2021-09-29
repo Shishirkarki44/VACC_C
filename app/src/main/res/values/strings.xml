@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">VACC-C</string>
+    <string name="terms"> I agree to the Terms and Conditions and Privacy Policy.</string>
+    <string name="todo">t</string>
+    <string name="sign_in">SIGN-IN</string>
+    <string name="message1"> Enter your Email Address</string>
+    <string name="email"> Email</string>
+    <string name="password"> Password</string>
+    <string name="enter_password"> Enter your Password</string>
+    <string name="passLost"> Forgot Password?</string>
+    <string name="first">Here for the First Time?</string>
+    <string name="register">Register!!!</string>
+    <string name="registerbtn">Register</string>
+    <string name="check_for_symptoms">Check for Symptoms</string>
+    <string name="my_vaccination">My Vaccination</string>
+    <string name="vaccine">Vaccine</string>
+    <string name="welcome_to_the_app">Welcome to the APP</string>
+    <string name="nulL"> menu icon</string>
+    <string name="get_health_support">Get Health Support</string>
+    <string name="covid_now">Covid Now</string>
+    <string name="health_topics">Health Topics</string>
+    <string name="log_out">LOG OUT</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="enter_email_address">Enter email address</string>
+    <string name="full_name">Full Name</string>
+    <string name="enter_your_fullname">Enter your fullname</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="enter_date_of_your_birth">Enter date of your birth</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="enter_your_contact_number">Enter your contact number</string>
+    <string name="checkbox">CheckBox</string>
+    <string name="button">Button</string>
+</resources>

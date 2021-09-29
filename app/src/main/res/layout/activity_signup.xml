@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".signupActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="74dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/title"
+            android:backgroundTint="#2C96D5D5"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:background="#8FB2EC"
+                android:fontFamily="@font/andika"
+                android:paddingStart="25dp"
+                android:paddingEnd="25dp"
+                android:text="@string/sign_up"
+                android:textColor="#3F51B5"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/andika"
+                android:text="@string/email"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/enterEmail"
+                android:layout_width="301dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:hint="@string/enter_email_address"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="0dp"
+                android:textColorHint="#75BAD8"
+                android:textSize="16sp"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="0dp"
+                android:fontFamily="@font/andika"
+                android:hint="@string/enter_password"
+                android:text="@string/password"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/registerpsw"
+                android:layout_width="304dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:hint="@string/enter_password"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="0dp"
+                android:textColorHint="#75BAD8"
+                android:textSize="16sp"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="195dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/andika"
+                android:text="@string/full_name"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/eTPersonName"
+                android:layout_width="306dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:hint="@string/enter_your_fullname"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="0dp"
+                android:textColorHint="#75BAD8"
+                android:textSize="16sp"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/dateOfBirth"
+                android:layout_width="195dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/andika"
+                android:text="@string/date_of_birth"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextDate"
+                android:layout_width="304dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:hint="@string/enter_date_of_your_birth"
+                android:importantForAutofill="no"
+                android:inputType="date"
+                android:minHeight="48dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="0dp"
+                android:textColorHint="#75BAD8"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/phonenumber"
+                android:layout_width="195dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/andika"
+                android:text="@string/phone_number"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/contact"
+                android:layout_width="306dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:hint="@string/enter_your_contact_number"
+                android:importantForAutofill="no"
+                android:inputType="phone"
+                android:minHeight="48dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="0dp"
+                android:textColorHint="#75BAD8"
+                android:textSize="16sp"
+                tools:ignore="TextContrastCheck" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="539dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="0dp"
+                android:fontFamily="@font/andika"
+                android:text="@string/terms"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/registerAccount"
+                android:layout_width="209dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:text="@string/registerbtn"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
