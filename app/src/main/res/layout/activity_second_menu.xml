@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:context=".secondMenuActivity">
+
+    <ImageView
+        android:id="@+id/titleView"
+        android:layout_width="110dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="148dp"
+        android:contentDescription="@string/nulL"
+        app:layout_constraintBottom_toBottomOf="@id/progressBar"
+        app:layout_constraintEnd_toEndOf="@id/progressBar"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/progressBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/title" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="404dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleView" />
+
+
+    <TextView
+        android:id="@+id/titleMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/andika"
+        android:text="@string/all_your_vaccination_details"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar"
+        app:layout_constraintVertical_bias="0.046" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/vaccname"
+                android:layout_width="121dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="5dp"
+                android:text="@string/vaccine_name"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/nameOfVaccine"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="0dp"
+                android:ems="10"
+                android:hint="@string/name_of_the_vaccine"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:textSize="14sp"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck,TextContrastCheck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/dob"
+                android:layout_width="121dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="5dp"
+                android:text="@string/date_of_birth2"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/doBirth"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="0dp"
+                android:ems="10"
+                android:hint="@string/date_of_birth"
+                android:importantForAutofill="no"
+                android:inputType="date"
+                android:textSize="14sp"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck,TextContrastCheck" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/datefirstDose"
+                android:layout_width="121dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="5dp"
+                android:text="@string/date_of_FD"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/firstDose"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="0dp"
+                android:ems="10"
+                android:hint="@string/date_of_first_dose"
+                android:importantForAutofill="no"
+                android:inputType="date"
+                android:textSize="14sp"
+                tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck,TextContrastCheck" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/datesecondDose"
+                android:layout_width="119dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="5dp"
+                android:text="@string/date_of_SD"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/secondDose"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="0dp"
+                android:ems="10"
+                android:hint="@string/date_of_second_dose"
+                android:importantForAutofill="no"
+                android:inputType="date"
+                android:textSize="14sp"
+                tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/state"
+                android:layout_width="121dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="5dp"
+                android:text="@string/stateofVacc"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/stateOfVaccine"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="0dp"
+                android:ems="10"
+                android:hint="@string/stateToVacc"
+                android:importantForAutofill="no"
+                android:inputType="textCapCharacters"
+                android:textSize="14sp"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck,TextContrastCheck" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="170dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="0dp"
+            android:onClick="goSave"
+            android:pointerIcon="hand"
+            android:text="@string/save" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/upload"
+        android:layout_width="116dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="90dp"
+        android:gravity="bottom|center"
+        android:onClick="upload"
+        android:pointerIcon="hand"
+        android:text="@string/upload"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/uploadhint"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="109dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="2dp"
+        android:ems="10"
+        android:hint="@string/file_name"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/upload"
+        app:layout_constraintStart_toEndOf="@+id/uploadhint"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/uploadhint"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="29dp"
+        android:text="@string/you_can_upload_your_vaccination_certificate"
+        android:textColor="#6D9AE4"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/clickHere"
+        app:layout_constraintEnd_toStartOf="@+id/upload"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/clickHere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginBottom="28dp"
+        android:fontFamily="@font/andika"
+        android:onClick="download"
+        android:pointerIcon="hand"
+        android:text="@string/view_your_certificate"
+        android:textColor="#3E8A23"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/goBack"
+        android:layout_width="89dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="57dp"
+        android:onClick="goBack"
+        android:text="@string/back"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/titleView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

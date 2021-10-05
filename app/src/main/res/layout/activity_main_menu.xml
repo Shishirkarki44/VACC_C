@@ -13,7 +13,7 @@
 
     <Button
         android:id="@+id/logout"
-        android:layout_width="141dp"
+        android:layout_width="wrap_content"
         android:layout_height="49dp"
 
         android:layout_marginTop="536dp"
@@ -82,12 +82,12 @@
 
     <TextView
         android:id="@+id/session_user"
-        android:layout_width="92dp"
-        android:layout_height="22dp"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="sans-serif-medium"
-        android:text="@string/email"
+        android:hint="@string/email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bar" />
 
@@ -106,8 +106,11 @@
             android:layout_margin="10dp">
 
             <RelativeLayout
+                android:id="@+id/firstMenu"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:contextClickable="true"
+                android:onClick="checkForSymptom">
 
                 <TextView
                     android:id="@+id/checkCovid"
@@ -138,8 +141,11 @@
             android:layout_margin="10dp">
 
             <RelativeLayout
+                android:id="@+id/secondMenu"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:contextClickable="true"
+                android:onClick="myvacc">
 
                 <TextView
                     android:id="@+id/myvaccination"
@@ -179,8 +185,11 @@
             android:layout_margin="10dp">
 
             <RelativeLayout
+                android:id="@+id/thirdMenu"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:contextClickable="true"
+                android:onClick="vaccinInfo">
 
                 <TextView
                     android:id="@+id/vaccine"
@@ -212,8 +221,11 @@
             android:layout_margin="10dp">
 
             <RelativeLayout
+                android:id="@+id/fourthMenu"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:contextClickable="true"
+                android:onClick="healthsupp">
 
                 <TextView
                     android:id="@+id/support"
@@ -253,8 +265,11 @@
             android:layout_margin="10dp">
 
             <RelativeLayout
+                android:id="@+id/fifthMenu"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:contextClickable="true"
+                android:onClick="covidNow">
 
                 <TextView
                     android:id="@+id/covidNow"
@@ -286,8 +301,11 @@
             android:layout_margin="10dp">
 
             <RelativeLayout
+                android:id="@+id/sixthMenu"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:contextClickable="true"
+                android:onClick="health">
 
                 <TextView
                     android:id="@+id/healthTopics"
