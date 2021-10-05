@@ -1,13 +1,13 @@
 package com.example.myapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -91,7 +91,7 @@ public class MainMenu extends AppCompatActivity {
     }
 
     public void health(View view) {
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public?adgroupsurvey={adgroupsurvey}&gclid=CjwKCAjwzOqKBhAWEiwArQGwaJD2VyWXV33aSQ4bceolbGnay7TPkpy1WWIVQ_U2n5nmoa8nQH06EhoClRYQAvD_BwE")));
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public")));
 
     }
 }
