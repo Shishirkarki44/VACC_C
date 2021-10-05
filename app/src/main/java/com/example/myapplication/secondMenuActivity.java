@@ -1,22 +1,18 @@
 package com.example.myapplication;
 
-import static com.google.firebase.FirebaseApp.getInstance;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -24,23 +20,15 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-import org.json.JSONArray;
-
-import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
-
-import io.perfmark.Tag;
 
 public class secondMenuActivity extends AppCompatActivity {
     private static final String TAG = "";
@@ -114,6 +102,7 @@ public class secondMenuActivity extends AppCompatActivity {
         String stateOfVaccin = stateOfVaccine.getText().toString();
 
         FirebaseUser mFirebaseUser = mFirebaseAuth.getCurrentUser();
+        assert mFirebaseUser != null;
         email = mFirebaseUser.getEmail();
         Map<String, Object> vaccination = new HashMap<>();
 
@@ -152,7 +141,7 @@ public class secondMenuActivity extends AppCompatActivity {
     public void upload(View view) {
         Intent intent = new Intent();
         intent.setType("application/pdf");
-        intent.setAction(intent.ACTION_GET_CONTENT);
+        intent.setAction(Intent.ACTION_GET_CONTENT);
 
         startActivityForResult(Intent.createChooser(intent,"SELECT PDF FILE"), 12);
 
@@ -162,7 +151,7 @@ public class secondMenuActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if ( requestCode == 12 && resultCode ==RESULT_OK && data.getData()!= null && data != null)
+        if (requestCode == 12 && resultCode == RESULT_OK && data.getData() != null)
         {
             uploadPDFFileFirebase(data.getData());
         }
@@ -179,14 +168,15 @@ public class secondMenuActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                         Task <Uri> uriTask = taskSnapshot.getStorage().getDownloadUrl();
-                        while(!uriTask.isComplete());
-                        Uri uri = uriTask.getResult();
+                        while(!uriTask.isComplete()) {
+                            Uri uri = uriTask.getResult();
 
-                        addPDF addPDF = new addPDF(editText.getText().toString(), uri.toString());
-                        databaseReference.child(databaseReference.push().getKey()).setValue(addPDF);
+                            addPDF addPDF = new addPDF(editText.getText().toString(), uri.toString());
+                            databaseReference.child(databaseReference.push().getKey()).setValue(addPDF);
 
-                        Toast.makeText(secondMenuActivity.this,"file uploaded", Toast.LENGTH_SHORT).show();
-                        pDialog.dismiss();
+                            Toast.makeText(secondMenuActivity.this, "file uploaded", Toast.LENGTH_SHORT).show();
+                            pDialog.dismiss();
+                        }
 
                     }
                 }). addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
@@ -200,6 +190,7 @@ public class secondMenuActivity extends AppCompatActivity {
 
     public void download(View view)
     {
+        Toast.makeText(secondMenuActivity.this, "Upload Your File First", Toast.LENGTH_SHORT).show();
 
     }
 }

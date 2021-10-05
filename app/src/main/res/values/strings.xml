@@ -51,6 +51,6 @@
     <string name="ambulance">Ambulance</string>
     <string name="book_a_test">Book a TEST</string>
     <string name="health_professional">Health Professional</string>
-    <string name="none"></string>
+    <string name="none"> </string>
     <string name="file_name">File name</string>
 </resources>

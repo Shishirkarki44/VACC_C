@@ -17,7 +17,6 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
     Button signinBtn= null;
     Button registerBtn = null;
     TextView forgotView = null;
-    View view = null;
     private FirebaseAuth mFirebaseAuth;
     private FirebaseFirestore dbase;
 

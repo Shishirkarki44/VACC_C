@@ -5,9 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -42,8 +40,6 @@ public class MainMenu extends AppCompatActivity {
         covidNow = findViewById(R.id.fifthMenu);
         covidAvoid = findViewById(R.id.sixthMenu);
 
-
-        email.getText().toString();
         mFirebaseAuth = FirebaseAuth.getInstance();
     }
 
