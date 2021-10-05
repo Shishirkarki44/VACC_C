@@ -16,7 +16,7 @@ import android.widget.Toast;
 public class emergencyActivity extends AppCompatActivity {
 
     private static final int CALL_PHONE_PERMISSION_CODE = 1;
-   String number;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,10 +24,9 @@ public class emergencyActivity extends AppCompatActivity {
 
 
     }
-    private void makeCall(int number)
+    private void makeCall(String number)
     {
-        String num = Integer.toString(number);
-        String dial= "tel:" + num;
+        String dial= "tel:" + number;
 
         Intent intent = new Intent(Intent.ACTION_DIAL);
         intent.setData(Uri.parse(dial));
@@ -37,7 +36,7 @@ public class emergencyActivity extends AppCompatActivity {
         if (ContextCompat.checkSelfPermission(emergencyActivity.this,
                 Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
 
-            makeCall(000);
+            makeCall("000");
 
         } else {
             requestCallPermissions();
@@ -50,7 +49,7 @@ public class emergencyActivity extends AppCompatActivity {
         {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED)
             {
-                int num = 000;
+                String num = "000";
                 makeCall(num);
             }
             else
@@ -74,7 +73,7 @@ public class emergencyActivity extends AppCompatActivity {
 
     public void doctor(View view) {
 
-        makeCall(1800022222);
+        makeCall("1800022222");
 
     }
 
